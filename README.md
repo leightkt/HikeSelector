@@ -19,19 +19,19 @@ User name, password, and favorite hikes are stored in a SQLite3 database, so the
 #### BACKGROUND INFORMATION
 
 Hike Filters
-  *Location
+  1. Location
    -String of "City, ST" 
    -User is given an alphabetical list of all hike locations and can select with arrow keys or list will filter by letter when user starts typing
-  *Dog Friendly?
+  2. Dog Friendly?
     -Boolean of true (dog friendly) or false (not dog friendly)
     -User will see a list of dog friendly hikes when this option is selected
-  *Elevation Gain
+  3. Elevation Gain
     -Integer of total elevation gain over the hike in miles
     -User can select from a set list of elevation gains
-  *Difficulty
+  4. Difficulty
     -String of one of three options ("Beginner", "Intermediate", "Advanced") based on hike difficulty
     -User can select from a set list of difficulties
-  *Distance
+  5. Distance
     -Integer of total distance of the hike in miles
     -User can select from a set list of distances
 
