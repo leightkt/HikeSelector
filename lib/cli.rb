@@ -122,7 +122,7 @@ class Cli
 
     def continue_or_exit
         choices = ["Look for another hike", "View favorites", "Exit"]
-        answer = prompt.select("Would you like to look for another hike or exit?", choices)
+        answer = prompt.select("What would you like to do now?", choices)
         if answer == "Exit"
             exit_app
         elsif answer == "View favorites"
@@ -142,10 +142,14 @@ class Cli
     end
 
     def add_to_favorites hike
-        answer = prompt.yes?("Would you like to add this hike to your favorites?")
+    answer = prompt.yes?("Would you like to add this hike to your favorites?")
         if answer
-            Userhike.create(user_id: @user.id, hike_id: hike.id)
-            puts "You have added a favorite!"
+            if @user.check_in_favorites(hike) == nil
+                Userhike.create(user_id: @user.id, hike_id: hike.id)
+                puts "You have added a favorite!"
+            else
+                puts "You've already tapped that!"
+            end
         else 
             continue_or_exit
         end        

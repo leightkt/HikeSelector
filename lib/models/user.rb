@@ -17,4 +17,11 @@ class User < ActiveRecord::Base
         end
     end
 
+    def check_in_favorites(hike)
+        favorite_hikes = self.userhikes
+        favorite_hikes.find do |favorite_hike|
+            favorite_hike.hike_id == hike.id
+        end
+    end
+
 end
