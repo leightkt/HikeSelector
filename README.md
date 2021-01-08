@@ -47,4 +47,4 @@ Future iterations could include a call to an appropriate API to seed more hike i
 This app was created using ruby, ActiveRecord, TTY-Prompt, TTY-Spinner, TTY-Font, TTY-Box, Colorize, and SQLite3. 
 
 ###### Demo
-You can watch a video demostration here: [https://youtu.be/eR9YVtxmrjI]
+You can watch a video demostration here: [https://youtu.be/upKsvTSj1PY]
